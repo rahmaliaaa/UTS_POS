@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MobilController;
+use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route Mobil
+Route::resource('mobil', MobilController::class);
+
+// Route Pelanggan
+Route::resource('pelanggan', PelangganController::class);
+
+// Route Transaksi
+Route::resource('transaksi', TransaksiController::class);
