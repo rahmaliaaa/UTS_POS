@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MobilController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\TransaksiController;
+use App\Models\Pelanggan;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +50,16 @@ Route::group(['prefix' => 'mobil'], function () {
 
 
 // Route Pelanggan
-Route::resource('pelanggan', PelangganController::class);
+Route::prefix('pelanggan')->group(function () {
+    Route::get('/', [PelangganController::class, 'index']);
+    Route::post('list', [PelangganController::class, 'list']);
+    Route::get('create_ajax', [PelangganController::class, 'create_ajax']);
+    Route::post('store_ajax', [PelangganController::class, 'store_ajax']);
+    Route::get('edit_ajax/{id}', [PelangganController::class, 'edit_ajax']);
+    Route::post('update_ajax/{id}', [PelangganController::class, 'update_ajax']);
+    Route::get('confirm_ajax/{id}', [PelangganController::class, 'confirm_ajax']); // menampilkan modal konfirmasi
+    Route::post('delete_ajax/{id}', [PelangganController::class, 'delete_ajax']);   // eksekusi hapus
+});
 
 // Route Transaksi
 Route::resource('transaksi', TransaksiController::class);

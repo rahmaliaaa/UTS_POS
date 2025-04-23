@@ -13,14 +13,14 @@ class PelangganSeeder extends Seeder
     {
         DB::table('pelanggan')->insert([
             [
-                'merk' => 'Andi',
+                'nama' => 'Andi',
                 'no_telp' => '081234567890',
                 'alamat' => 'Jl. Mawar No. 10',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
-                'merk' => 'Budi',
+                'nama' => 'Budi',
                 'no_telp' => '082233445566',
                 'alamat' => 'Jl. Melati No. 22',
                 'created_at' => Carbon::now(),

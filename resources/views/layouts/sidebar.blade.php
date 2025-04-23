@@ -23,13 +23,13 @@
 
             <li class="nav-header">Master Data</li>
             <li class="nav-item">
-                <a href="{{ url('/level') }}" class="nav-link {{ ($activeMenu == 'level') ? 'active' : '' }}">
+                <a href="{{ url('/mobil') }}" class="nav-link {{ ($activeMenu == 'mobil') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-layer-group"></i>
                     <p>Data Mobil</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/user') }}" class="nav-link {{ ($activeMenu == 'user') ? 'active' : '' }}">
+                <a href="{{ url('/pelanggan') }}" class="nav-link {{ ($activeMenu == 'pelanggan') ? 'active' : '' }}">
                     <i class="nav-icon far fa-user"></i>
                     <p>Data Pelanggan</p>
                 </a>
@@ -37,15 +37,9 @@
 
             <li class="nav-header">Transaksi</li>
             <li class="nav-item">
-                <a href="{{ url('/kategori') }}" class="nav-link {{ ($activeMenu == 'kategori') ? 'active' : '' }}">
+                <a href="{{ url('/penjualan') }}" class="nav-link {{ ($activeMenu == 'penjualan') ? 'active' : '' }}">
                     <i class="nav-icon far fa-bookmark"></i>
                     <p>Penjualan</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ url('/barang') }}" class="nav-link {{ ($activeMenu == 'barang') ? 'active' : '' }}">
-                    <i class="nav-icon far fa-list-alt"></i>
-                    <p>Data Stok</p>
                 </a>
             </li>
         </ul>
